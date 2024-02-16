@@ -14,6 +14,9 @@ const Nav = () => {
         Search
       </a>
       <a className="nav__link" href="./">
+        Encounter
+      </a>
+      <a className="nav__link" href="./">
         About
       </a>
     </nav>

@@ -1,9 +1,9 @@
-import { Link } from "react-router-dom";
 import "./Header.css";
 const Header = () => {
   return (
     <header className="header">
-      <h1 className="header__title">Dungeon Searcher</h1>
+      <h1 className="header__title">Encounter Planner</h1>
+      <p className="header__text">The easy way to plan an encounter</p>
     </header>
   );
 };
