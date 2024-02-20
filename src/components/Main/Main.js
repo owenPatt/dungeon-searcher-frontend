@@ -1,19 +1,25 @@
 import "./Main.css";
 import { useState } from "react";
 import { Open5e } from "../../utils/api";
+import Loading from "../Loading/Loading";
 
 function Main() {
   const [searchValue, setSearchValue] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const open5e = new Open5e();
 
   const search = (event) => {
     event.preventDefault();
+    setLoading(true);
     open5e
       .searchMonsters(searchValue)
       .then((monsters) => {
         console.log(monsters);
         setSearchValue("");
+      })
+      .finally(() => {
+        setLoading(false);
       })
       .catch((error) => {
         console.error(error);
@@ -38,6 +44,8 @@ function Main() {
           </button>
         </div>
       </form>
+
+      {loading ? <Loading /> : <div></div>}
     </main>
   );
 }
