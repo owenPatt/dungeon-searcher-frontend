@@ -1,0 +1,11 @@
+.loading {
+  padding-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading__spinner {
+  width: 80px;
+  height: 80px;
+}
