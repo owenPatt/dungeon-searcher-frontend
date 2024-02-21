@@ -3,7 +3,6 @@ import "./ResultBody.css";
 
 const ResultBody = ({ items, page, updatePage, numResults }) => {
   const lastPage = Math.ceil(numResults / 50);
-  console.log(page + " " + lastPage + " " + numResults);
 
   return (
     <div className="result-body">
