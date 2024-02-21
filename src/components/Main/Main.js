@@ -6,17 +6,18 @@ import ResultBody from "../ResultBody/ResultBody";
 function Main({ open5e }) {
   const [searchValue, setSearchValue] = useState("");
   const [loading, setLoading] = useState(false);
-  const [results, setResults] = useState([{}]);
+  const [results, setResults] = useState([]);
   const [page, setPage] = useState(1);
   const [numResults, setNumResults] = useState(0);
 
   const updatePage = (newPage) => {
-    setResults([{}]);
+    setResults([]);
     setPage(newPage);
     setLoading(true);
     open5e
       .changePage(newPage)
       .then((monsters) => {
+        console.log(monsters);
         if (monsters.results) setResults(monsters.results);
         setNumResults(monsters.count);
       })
@@ -35,6 +36,7 @@ function Main({ open5e }) {
     open5e
       .searchMonsters(searchValue)
       .then((monsters) => {
+        console.log(monsters);
         if (monsters.results) setResults(monsters.results);
         setNumResults(monsters.count);
         setSearchValue("");
@@ -68,7 +70,7 @@ function Main({ open5e }) {
 
       {loading ? (
         <Loading />
-      ) : results[0].name === undefined ? (
+      ) : results.length === 0 ? (
         ""
       ) : (
         <ResultBody
