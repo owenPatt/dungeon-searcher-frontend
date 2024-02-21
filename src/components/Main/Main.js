@@ -3,7 +3,7 @@ import { useState } from "react";
 import Loading from "../Loading/Loading";
 import ResultBody from "../ResultBody/ResultBody";
 
-function Main({ open5e }) {
+function Main({ open5e, addSelectedResult }) {
   const [searchValue, setSearchValue] = useState("");
   const [loading, setLoading] = useState(false);
   const [results, setResults] = useState([]);
@@ -77,7 +77,8 @@ function Main({ open5e }) {
           items={results}
           page={page}
           updatePage={updatePage}
-          numResults={numResults}></ResultBody>
+          numResults={numResults}
+          onAdd={addSelectedResult}></ResultBody>
       )}
     </main>
   );
