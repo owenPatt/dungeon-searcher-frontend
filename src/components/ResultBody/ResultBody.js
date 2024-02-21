@@ -1,13 +1,13 @@
 import Item from "../Item/Item";
 import "./ResultBody.css";
 
-const ResultBody = ({ items, page, updatePage, numResults }) => {
+const ResultBody = ({ items, page, updatePage, numResults, onAdd }) => {
   const lastPage = Math.ceil(numResults / 50);
 
   return (
     <div className="result-body">
       {items.map((item, index) => {
-        return <Item key={index} {...item} />;
+        return <Item key={index} onAdd={onAdd} item={item} />;
       })}
       <div className="result-body__buttons">
         {page > 1 ? (

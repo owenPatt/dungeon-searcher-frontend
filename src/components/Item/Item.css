@@ -25,16 +25,30 @@
   align-items: center;
 }
 
+.item__add-btn {
+  background-image: url(../../images/add-icon.svg);
+  width: 18px;
+  height: 18px;
+  background-color: transparent;
+  background-size: cover;
+  border: none;
+  cursor: pointer;
+}
+
+.item__add-btn:hover {
+  opacity: 0.7;
+}
+
 .item__expand {
-  height: 0;
+  max-height: 0;
   overflow: hidden;
   background-color: #dddddd;
   color: black;
-  transition: height 0.3s ease;
+  transition: max-height 0.5s ease, padding 0.5s ease;
 }
 
 .item__expand_expanded {
-  height: fit-content;
+  max-height: 1000px;
   padding: 10px;
 }
 

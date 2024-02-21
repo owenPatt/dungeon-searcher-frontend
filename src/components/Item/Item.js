@@ -1,10 +1,11 @@
 import { useState } from "react";
 import "./Item.css";
 
-const Item = (item) => {
+const Item = ({ item, onAdd }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleExpand = () => {
+  const toggleExpand = (e) => {
+    if (e.target.className === "item__add-btn") return;
     setIsOpen(!isOpen);
   };
 
@@ -13,17 +14,6 @@ const Item = (item) => {
     alignment = "";
   } else {
     alignment = " - " + item.alignment;
-  }
-
-  let speed = item.speed.walk + "ft";
-  if (item.speed.fly) {
-    speed += " - " + item.speed.fly + "ft (fly)";
-  }
-  if (item.speed.burrow) {
-    speed += " - " + item.speed.burrow + "ft (burrow)";
-  }
-  if (item.speed.swim) {
-    speed += " - " + item.speed.swim + "ft (swim)";
   }
 
   return (
@@ -44,6 +34,12 @@ const Item = (item) => {
         <div className="item__right-side">
           <p className="item__doc">{item.document__title}</p>
           <p className="item__cr">CR: {item.cr}</p>
+          <button
+            type="button"
+            className="item__add-btn"
+            onClick={() => {
+              onAdd(item);
+            }}></button>
         </div>
       </div>
       <div className={`item__expand ${isOpen ? "item__expand_expanded" : ""}`}>
@@ -54,6 +50,14 @@ const Item = (item) => {
           <p className="item__stat">
             HP: {item.hit_points} ({item.hit_dice})
           </p>
+
+          {item.condition_immunities !== "" ? (
+            <p className="item__stat">
+              Condition Immunities: {item.condition_immunities}
+            </p>
+          ) : (
+            ""
+          )}
           {item.damage_immunities !== "" ? (
             <p className="item__stat">Immunities: {item.damage_immunities}</p>
           ) : (
@@ -71,7 +75,16 @@ const Item = (item) => {
           ) : (
             ""
           )}
-          <p className="item__stat">Speed: {speed}</p>
+
+          <p className="item__stat">
+            Speed:{" "}
+            {Object.keys(item.speed).map((key, index) => {
+              const speed = item.speed[key] + "ft (" + key + ")";
+              return index === Object.keys(item.speed).length - 1
+                ? speed
+                : speed + ", ";
+            })}
+          </p>
         </div>
         <div className="item__stat-section">
           <p className="item__stat">
