@@ -3,7 +3,7 @@ const Header = () => {
   return (
     <header className="header">
       <h1 className="header__title">Encounter Planner</h1>
-      <p className="header__text">The easy way to plan an encounter</p>
+      <p className="header__text">The easy way to plan a 5e encounter</p>
     </header>
   );
 };

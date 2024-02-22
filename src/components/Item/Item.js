@@ -1,7 +1,9 @@
 import { useState } from "react";
 import "./Item.css";
+import addButton from "../../images/add-icon.svg";
+import removeButton from "../../images/delete-icon.png";
 
-const Item = ({ item, onAdd }) => {
+const Item = ({ item, onButtonClick, add }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleExpand = (e) => {
@@ -37,8 +39,11 @@ const Item = ({ item, onAdd }) => {
           <button
             type="button"
             className="item__add-btn"
+            style={{
+              backgroundImage: `url(${add ? addButton : removeButton})`,
+            }}
             onClick={() => {
-              onAdd(item);
+              onButtonClick(item);
             }}></button>
         </div>
       </div>
