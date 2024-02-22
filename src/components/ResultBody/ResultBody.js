@@ -7,7 +7,9 @@ const ResultBody = ({ items, page, updatePage, numResults, onAdd }) => {
   return (
     <div className="result-body">
       {items.map((item, index) => {
-        return <Item key={index} onAdd={onAdd} item={item} />;
+        return (
+          <Item key={index} onButtonClick={onAdd} item={item} add={true} />
+        );
       })}
       <div className="result-body__buttons">
         {page > 1 ? (

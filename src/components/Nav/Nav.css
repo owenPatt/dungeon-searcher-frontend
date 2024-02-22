@@ -11,6 +11,12 @@
   text-decoration: none;
   color: #ffffff;
   border-bottom: #ffffff 1px solid;
+  margin: 0;
+}
+
+.nav__link_active {
+  color: rgb(199, 0, 0);
+  border-bottom: rgb(199, 0, 0) 1px solid;
 }
 
 .nav__link:hover {
