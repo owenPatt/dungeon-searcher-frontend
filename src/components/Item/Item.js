@@ -134,6 +134,19 @@ const Item = ({ item, onButtonClick, add }) => {
               ))
             : ""}
 
+          {item.reactions !== null ? (
+            <p className="item__stat">Reactions</p>
+          ) : (
+            ""
+          )}
+          {item.reactions !== null
+            ? item.reactions.map((reaction, index) => (
+                <p className="item__stat item__stat_indent" key={index}>
+                  {reaction.name}: {reaction.desc}
+                </p>
+              ))
+            : ""}
+
           {item.legendary_actions !== null ? (
             <p className="item__stat">Legendary Actions</p>
           ) : (
