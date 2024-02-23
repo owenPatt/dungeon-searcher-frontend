@@ -77,12 +77,7 @@ function App() {
             />
           }
         />
-        <Route
-          path="/about"
-          element={
-            <Main open5e={open5e} addSelectedResult={addSelectedResult} />
-          }
-        />
+        <Route path="/about" element={<p>Hello</p>} />
       </Routes>
     </div>
   );
