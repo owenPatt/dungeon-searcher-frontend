@@ -3,12 +3,18 @@ import { useState } from "react";
 import Loading from "../Loading/Loading";
 import ResultBody from "../ResultBody/ResultBody";
 
-function Main({ open5e, addSelectedResult }) {
+function Main({
+  open5e,
+  addSelectedResult,
+  results,
+  page,
+  numResults,
+  setResults,
+  setPage,
+  setNumResults,
+}) {
   const [searchValue, setSearchValue] = useState("");
   const [loading, setLoading] = useState(false);
-  const [results, setResults] = useState([]);
-  const [page, setPage] = useState(1);
-  const [numResults, setNumResults] = useState(0);
 
   const updatePage = (newPage) => {
     setResults([]);
