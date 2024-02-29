@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/encounter-planner-frontend/static/css/main.94ca6761.css",
+    "main.css": "/encounter-planner-frontend/static/css/main.6e2bc58f.css",
     "main.js": "/encounter-planner-frontend/static/js/main.cff9efe4.js",
     "static/js/453.e0a2b707.chunk.js": "/encounter-planner-frontend/static/js/453.e0a2b707.chunk.js",
     "static/media/ProtestRevolution-Regular.ttf": "/encounter-planner-frontend/static/media/ProtestRevolution-Regular.a1e49247209c98149261.ttf",
@@ -8,12 +8,12 @@
     "static/media/delete-icon.png": "/encounter-planner-frontend/static/media/delete-icon.63a8d029821d078687f1.png",
     "index.html": "/encounter-planner-frontend/index.html",
     "static/media/add-icon.svg": "/encounter-planner-frontend/static/media/add-icon.d86bb2edc2f6eadb96b785d29c82b56e.svg",
-    "main.94ca6761.css.map": "/encounter-planner-frontend/static/css/main.94ca6761.css.map",
+    "main.6e2bc58f.css.map": "/encounter-planner-frontend/static/css/main.6e2bc58f.css.map",
     "main.cff9efe4.js.map": "/encounter-planner-frontend/static/js/main.cff9efe4.js.map",
     "453.e0a2b707.chunk.js.map": "/encounter-planner-frontend/static/js/453.e0a2b707.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.94ca6761.css",
+    "static/css/main.6e2bc58f.css",
     "static/js/main.cff9efe4.js"
   ]
 }
