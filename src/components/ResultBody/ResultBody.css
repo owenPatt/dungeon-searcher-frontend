@@ -18,3 +18,21 @@
 .result-body__page-num {
   margin: 0;
 }
+
+@media (max-width: 1130px) and (min-width: 931px) {
+  .result-body {
+    max-width: 900px;
+  }
+}
+
+@media (max-width: 930px) and (min-width: 631px) {
+  .result-body {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 630px) and (min-width: 0px) {
+  .result-body {
+    max-width: 300px;
+  }
+}
