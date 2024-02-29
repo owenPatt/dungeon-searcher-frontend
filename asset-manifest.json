@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.357c2970.css",
+    "main.js": "/static/js/main.8b087f7e.js",
+    "static/js/453.e0a2b707.chunk.js": "/static/js/453.e0a2b707.chunk.js",
+    "static/media/ProtestRevolution-Regular.ttf": "/static/media/ProtestRevolution-Regular.a1e49247209c98149261.ttf",
+    "static/media/header-image.jpg": "/static/media/header-image.01444cb567fe52f5f2f5.jpg",
+    "static/media/delete-icon.png": "/static/media/delete-icon.63a8d029821d078687f1.png",
+    "index.html": "/index.html",
+    "static/media/add-icon.svg": "/static/media/add-icon.d86bb2edc2f6eadb96b785d29c82b56e.svg",
+    "main.357c2970.css.map": "/static/css/main.357c2970.css.map",
+    "main.8b087f7e.js.map": "/static/js/main.8b087f7e.js.map",
+    "453.e0a2b707.chunk.js.map": "/static/js/453.e0a2b707.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.357c2970.css",
+    "static/js/main.8b087f7e.js"
+  ]
+}
