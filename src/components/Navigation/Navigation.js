@@ -1,28 +1,28 @@
 import { NavLink } from "react-router-dom";
 import "./Navigation.css";
 
-const Navigation = () => {
+const Navigation = ({ baseUrl }) => {
   return (
     <nav className="nav">
       <NavLink
         className={({ isActive }) =>
           isActive ? "nav__link nav__link_active" : "nav__link"
         }
-        to="/">
+        to={`${baseUrl}/`}>
         Search
       </NavLink>
       <NavLink
         className={({ isActive }) =>
           isActive ? "nav__link nav__link_active" : "nav__link"
         }
-        to="/encounter">
+        to={`${baseUrl}/encounter`}>
         Encounter
       </NavLink>
       <NavLink
         className={({ isActive }) =>
           isActive ? "nav__link nav__link_active" : "nav__link"
         }
-        to="/about">
+        to={`${baseUrl}/about`}>
         About
       </NavLink>
     </nav>

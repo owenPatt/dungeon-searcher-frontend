@@ -17,6 +17,8 @@ function App() {
   const [numResults, setNumResults] = useState(0);
   const [level, setLevel] = useState(1);
 
+  const baseUrl = ""; //needs to be set to 'encounter-planner-frontend' if being deployed
+
   const open5e = useMemo(() => new Open5e(), []);
 
   const addSelectedResult = (result) => {
@@ -50,10 +52,10 @@ function App() {
 
   return (
     <div className="app">
-      <Navigation />
+      <Navigation baseUrl={baseUrl} />
       <Routes>
         <Route
-          path="/"
+          path={`${baseUrl}/`}
           element={
             <>
               <Header />{" "}
@@ -71,7 +73,7 @@ function App() {
           }
         />
         <Route
-          path="/encounter"
+          path={`${baseUrl}/encounter`}
           element={
             <Encounter
               selectedResults={selectedResults}
@@ -81,7 +83,7 @@ function App() {
             />
           }
         />
-        <Route path="/about" element={<About />} />
+        <Route path={`${baseUrl}/about`} element={<About />} />
       </Routes>
       <Footer />
     </div>
