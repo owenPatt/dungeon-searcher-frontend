@@ -74,7 +74,7 @@ function Main({
       {loading ? (
         <Preloader />
       ) : results.length === 0 ? (
-        ""
+        <p className="main__no-results">No results found</p>
       ) : (
         <ResultBody
           items={results}
