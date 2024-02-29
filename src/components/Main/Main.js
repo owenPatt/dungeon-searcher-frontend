@@ -16,6 +16,7 @@ function Main({
   const [searchValue, setSearchValue] = useState("");
   const [loading, setLoading] = useState(false);
   const [hasSearched, setHasSearched] = useState(false);
+  const [error, setError] = useState(false);
 
   const updatePage = (newPage) => {
     setResults([]);
@@ -33,6 +34,7 @@ function Main({
       })
       .catch((error) => {
         console.error(error);
+        setError(true);
       });
   };
 
@@ -54,6 +56,7 @@ function Main({
       })
       .catch((error) => {
         console.error(error);
+        setError(true);
       });
   };
 
@@ -76,7 +79,11 @@ function Main({
       {loading ? (
         <Preloader />
       ) : results.length === 0 && hasSearched ? (
-        <p className="main__search-error">No Results Found</p>
+        <p className="main__search-error">
+          {error
+            ? "Sorry, something went wrong during the request. There may be a connection issue or the server may be down. Please try again later."
+            : "No Results Found"}
+        </p>
       ) : (
         <ResultBody
           items={results}
