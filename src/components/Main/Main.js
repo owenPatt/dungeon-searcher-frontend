@@ -1,6 +1,6 @@
 import "./Main.css";
 import { useState } from "react";
-import Loading from "../Loading/Loading";
+import Preloader from "../Preloader/Preloader";
 import ResultBody from "../ResultBody/ResultBody";
 
 function Main({
@@ -68,14 +68,11 @@ function Main({
             onChange={(event) => setSearchValue(event.target.value)}
             placeholder="Goblin"
           />
-          <button className="main__button" type="button">
-            Filters
-          </button>
         </div>
       </form>
 
       {loading ? (
-        <Loading />
+        <Preloader />
       ) : results.length === 0 ? (
         ""
       ) : (

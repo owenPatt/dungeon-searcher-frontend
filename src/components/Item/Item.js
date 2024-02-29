@@ -48,6 +48,16 @@ const Item = ({ item, onButtonClick, add }) => {
         </div>
       </div>
       <div className={`item__expand ${isOpen ? "item__expand_expanded" : ""}`}>
+        <p className="item__doc item__doc_mobile">{item.document__title}</p>
+        {item.subtype !== "" ? (
+          <p className="item__type item__type_mobile">
+            {item.type + ", " + item.subtype + " - " + item.size + alignment}
+          </p>
+        ) : (
+          <p className="item__type item__type_mobile">
+            {item.type + " - " + item.size + alignment}
+          </p>
+        )}
         <div className="item__stat-section">
           <p className="item__stat">
             AC: {item.armor_class} ({item.armor_desc})

@@ -10,7 +10,7 @@
 }
 
 .main__form {
-  width: 900px;
+  max-width: 900px;
   margin: 10px auto;
   display: flex;
   flex-direction: column;
@@ -34,22 +34,20 @@
   border-bottom: 1px solid #000000;
 }
 
-.main__button {
-  width: 150px;
-  padding: 7px;
-  font-family: "protest-revolution", sans-serif;
-  line-height: 1.2;
-  font-size: 25px;
-  border: none;
-  cursor: pointer;
+@media (max-width: 1100px) and (min-width: 751px) {
+  .main__form {
+    max-width: 700px;
+  }
 }
 
-.main__search-btn {
-  width: 300px;
-  padding: 7px;
-  font-family: "protest-revolution", sans-serif;
-  line-height: 1.2;
-  font-size: 30px;
-  border: none;
-  cursor: pointer;
+@media (max-width: 750px) and (min-width: 521px) {
+  .main__form {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 520px) and (min-width: 0px) {
+  .main__form {
+    max-width: 300px;
+  }
 }

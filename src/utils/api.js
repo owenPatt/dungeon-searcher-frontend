@@ -19,7 +19,8 @@ class Open5e {
   }
 
   async changePage(page) {
-    if (!this.lastUrl) throw new Error("You must perform a search first.");
+    if (this.lastUrl === "")
+      throw new Error("You must perform a search first.");
     this.lastUrl = this.lastUrl.slice(0, -1) + page;
     const response = await fetch(this.lastUrl, {
       headers: {

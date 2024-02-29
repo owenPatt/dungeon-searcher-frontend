@@ -44,3 +44,21 @@
   font-size: 32px;
   text-align: center;
 }
+
+@media (max-width: 1130px) and (min-width: 931px) {
+  .encounter {
+    max-width: 900px;
+  }
+}
+
+@media (max-width: 930px) and (min-width: 631px) {
+  .encounter {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 630px) and (min-width: 0px) {
+  .encounter {
+    max-width: 300px;
+  }
+}

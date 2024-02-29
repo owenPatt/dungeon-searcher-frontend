@@ -1,9 +1,11 @@
 import "./App.css";
 import Header from "../Header/Header";
-import Nav from "../Nav/Nav";
+import Navigation from "../Navigation/Navigation";
 import Main from "../Main/Main";
 import Encounter from "../Encounter/Encounter";
-import React, { useState } from "react";
+import About from "../About/About";
+import Footer from "../Footer/Footer";
+import React, { useState, useMemo } from "react";
 import { Route, Routes } from "react-router-dom";
 import { Open5e } from "../../utils/api";
 
@@ -13,6 +15,8 @@ function App() {
   const [page, setPage] = useState(1);
   const [numResults, setNumResults] = useState(0);
   const [level, setLevel] = useState(1);
+
+  const open5e = useMemo(() => new Open5e(), []);
 
   const addSelectedResult = (result) => {
     setSelectedResults([...selectedResults, result]);
@@ -43,10 +47,9 @@ function App() {
     }
   };
 
-  const open5e = new Open5e();
   return (
     <div className="app">
-      <Nav />
+      <Navigation />
       <Routes>
         <Route
           path="/"
@@ -77,8 +80,9 @@ function App() {
             />
           }
         />
-        <Route path="/about" element={<p>Hello</p>} />
+        <Route path="/about" element={<About />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
