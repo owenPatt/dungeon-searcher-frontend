@@ -1,3 +1,4 @@
+// Used by the predeploy script to add the homepage field to package.json
 const jsonfile = require("jsonfile");
 const packageJson = require("./package.json");
 
