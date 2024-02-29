@@ -1,3 +1,4 @@
+// Used by the postdeploy script in package.json to remove the homepage field from package.json after updateHomepage.js adds it
 const jsonfile = require("jsonfile");
 const packageJson = require("./package.json");
 
