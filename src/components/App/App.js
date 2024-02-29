@@ -6,13 +6,16 @@ import Main from "../Main/Main";
 import Encounter from "../Encounter/Encounter";
 import About from "../About/About";
 import Footer from "../Footer/Footer";
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import { Open5e } from "../../utils/open5eAPI";
 
 function App() {
   const [selectedResults, setSelectedResults] = useState([]);
-  const [results, setResults] = useState([]);
+  const [results, setResults] = useState(() => {
+    const storedResults = localStorage.getItem("data");
+    return storedResults ? JSON.parse(storedResults) : [];
+  });
   const [page, setPage] = useState(1);
   const [numResults, setNumResults] = useState(0);
   const [level, setLevel] = useState(1);
@@ -21,6 +24,18 @@ function App() {
     process.env.NODE_ENV === "production" ? "encounter-planner-frontend" : "";
 
   const open5e = useMemo(() => new Open5e(), []);
+
+  useEffect(() => {
+    const storedData = localStorage.getItem("data");
+    console.log(storedData);
+    if (storedData) {
+      setResults(JSON.parse(storedData));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("data", JSON.stringify(results));
+  }, [results]);
 
   const addSelectedResult = (result) => {
     setSelectedResults([...selectedResults, result]);
