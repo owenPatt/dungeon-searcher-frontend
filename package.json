@@ -18,8 +18,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "predeploy": "npm run build",
+    "predeploy": "node updateHomepage.js && npm run build",
     "deploy": "gh-pages -d build",
+    "postdeploy": "node resetHomepage.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -43,6 +44,7 @@
   },
   "devDependencies": {
     "eslint": "^8.57.0",
-    "gh-pages": "^6.1.1"
+    "gh-pages": "^6.1.1",
+    "jsonfile": "^6.1.0"
   }
 }
