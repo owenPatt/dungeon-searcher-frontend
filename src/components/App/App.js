@@ -1,4 +1,5 @@
 import "./App.css";
+import "bootstrap/dist/css/bootstrap.css";
 import Header from "../Header/Header";
 import Navigation from "../Navigation/Navigation";
 import Main from "../Main/Main";

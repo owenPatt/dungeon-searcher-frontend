@@ -24,6 +24,8 @@
   display: flex;
   align-items: center;
   gap: 5px;
+  font-family: "protest-revolution", sans-serif;
+  line-height: 1.2;
 }
 
 .main__input {
