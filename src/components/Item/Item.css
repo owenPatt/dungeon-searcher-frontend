@@ -83,11 +83,11 @@
 }
 
 .item__stat {
-  padding-left: 80px;
+  padding-left: 20px;
 }
 
 .item__stat_indent {
-  padding-left: 100px;
+  padding-left: 40px;
 }
 
 .item__name,
@@ -112,11 +112,11 @@
     display: block;
   }
   .item__stat {
-    padding-left: 50px;
+    padding-left: 10px;
   }
 
   .item__stat_indent {
-    padding-left: 70px;
+    padding-left: 30px;
   }
 }
 
@@ -132,11 +132,11 @@
     display: block;
   }
   .item__stat {
-    padding-left: 20px;
+    padding-left: 5px;
   }
 
   .item__stat_indent {
-    padding-left: 40px;
+    padding-left: 25px;
   }
 }
 
@@ -163,9 +163,9 @@
     border-bottom: #000000 1px solid;
   }
   .item__stat {
-    padding-left: 10px;
+    padding-left: 0px;
   }
   .item__stat_indent {
-    padding-left: 30px;
+    padding-left: 15px;
   }
 }
