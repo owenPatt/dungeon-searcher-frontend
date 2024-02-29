@@ -17,7 +17,8 @@ function App() {
   const [numResults, setNumResults] = useState(0);
   const [level, setLevel] = useState(1);
 
-  const baseUrl = ""; //needs to be set to 'encounter-planner-frontend' if being deployed
+  const baseUrl =
+    process.env.NODE_ENV === "production" ? "encounter-planner-frontend" : "";
 
   const open5e = useMemo(() => new Open5e(), []);
 

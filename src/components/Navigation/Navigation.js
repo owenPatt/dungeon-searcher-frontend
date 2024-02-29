@@ -8,7 +8,8 @@ const Navigation = ({ baseUrl }) => {
         className={({ isActive }) =>
           isActive ? "nav__link nav__link_active" : "nav__link"
         }
-        to={`${baseUrl}/`}>
+        to={`${baseUrl}/`}
+        end>
         Search
       </NavLink>
       <NavLink
