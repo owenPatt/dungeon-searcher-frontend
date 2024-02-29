@@ -3,6 +3,7 @@ import "./ResultBody.css";
 
 const ResultBody = ({ items, page, updatePage, numResults, onAdd }) => {
   const lastPage = Math.ceil(numResults / 50);
+  if (items.length === 0) return;
 
   return (
     <div className="result-body">

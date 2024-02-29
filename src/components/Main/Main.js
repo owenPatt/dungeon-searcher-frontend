@@ -15,6 +15,7 @@ function Main({
 }) {
   const [searchValue, setSearchValue] = useState("");
   const [loading, setLoading] = useState(false);
+  const [hasSearched, setHasSearched] = useState(false);
 
   const updatePage = (newPage) => {
     setResults([]);
@@ -39,6 +40,7 @@ function Main({
     setPage(1);
     event.preventDefault();
     setLoading(true);
+    setHasSearched(true);
     open5e
       .searchMonsters(searchValue)
       .then((monsters) => {
@@ -73,8 +75,8 @@ function Main({
 
       {loading ? (
         <Preloader />
-      ) : results.length === 0 ? (
-        <p className="main__no-results">No results found</p>
+      ) : results.length === 0 && hasSearched ? (
+        <p className="main__search-error">No Results Found</p>
       ) : (
         <ResultBody
           items={results}

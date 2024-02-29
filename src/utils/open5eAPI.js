@@ -6,7 +6,6 @@ class Open5e {
   }
 
   async searchMonsters(query) {
-    if (!query) throw new Error("You must provide a search query.");
     let url = `${this.baseUrl}/monsters/?search=${query}&limit=${this.searchLimit}&ordering=cr&page=1`;
     this.lastUrl = url;
     const response = await fetch(url, {
