@@ -36,6 +36,12 @@
   border-bottom: 1px solid #000000;
 }
 
+.main__search-error {
+  text-align: center;
+  font-size: 28px;
+  padding-top: 50px;
+}
+
 @media (max-width: 1100px) and (min-width: 751px) {
   .main__form {
     max-width: 700px;

@@ -8,7 +8,7 @@ import About from "../About/About";
 import Footer from "../Footer/Footer";
 import React, { useState, useMemo } from "react";
 import { Route, Routes } from "react-router-dom";
-import { Open5e } from "../../utils/api";
+import { Open5e } from "../../utils/open5eAPI";
 
 function App() {
   const [selectedResults, setSelectedResults] = useState([]);
