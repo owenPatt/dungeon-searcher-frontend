@@ -1,0 +1,63 @@
+.main {
+  width: 100%;
+  margin: 30px 0;
+}
+
+.main__header {
+  text-align: center;
+  font-size: 28px;
+  padding-bottom: 10px;
+}
+
+.main__form {
+  max-width: 900px;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.main__search-bar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: "protest-revolution", sans-serif;
+  line-height: 1.2;
+}
+
+.main__input {
+  width: 100%;
+  padding: 7px;
+  font-size: 25px;
+  border: none;
+  border-bottom: 1px solid #000000;
+}
+
+.main__search-error {
+  text-align: center;
+  font-size: 28px;
+  padding-top: 50px;
+  max-width: 80vw;
+  margin: 0 auto;
+}
+
+@media (max-width: 1100px) and (min-width: 751px) {
+  .main__form {
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 750px) and (min-width: 521px) {
+  .main__form {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 520px) and (min-width: 0px) {
+  .main__form {
+    max-width: 300px;
+  }
+}

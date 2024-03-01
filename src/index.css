@@ -1,0 +1,16 @@
+html {
+  background-color: rgb(43, 43, 43);
+  color: #ffffff;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
+  margin: 0;
+  padding: 0;
+}

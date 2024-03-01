@@ -1,0 +1,38 @@
+.result-body {
+  max-width: 1100px;
+  margin: 20px auto;
+}
+
+.result-body__buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.result-body__button {
+  padding: 10px;
+  background-color: rgb(197, 197, 197);
+  border: none;
+}
+
+.result-body__page-num {
+  margin: 0;
+}
+
+@media (max-width: 1130px) and (min-width: 931px) {
+  .result-body {
+    max-width: 900px;
+  }
+}
+
+@media (max-width: 930px) and (min-width: 631px) {
+  .result-body {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 630px) and (min-width: 0px) {
+  .result-body {
+    max-width: 300px;
+  }
+}
